@@ -823,15 +823,80 @@ canvas {
             <h4>3.5 Self-rated confidence</h4>
             <p id="p-confidence"></p>
           </div>
+
+          <div class="paper-subsection">
+            <h4>3.6 Summary of key findings</h4>
+            <ol class="impact-list">
+              <li class="impact-item">
+                <span class="i-num mono">01</span>
+                <div><h4>Digital payments are the default</h4><p>Digital payments are the default transaction method for most students, with 67% paying digitally at least once a day.</p></div>
+              </li>
+              <li class="impact-item">
+                <span class="i-num mono">02</span>
+                <div><h4>GPay leads a multi-app market</h4><p>GPay is the most widely used application, followed by PhonePe and BHIM; most students use more than one app.</p></div>
+              </li>
+              <li class="impact-item">
+                <span class="i-num mono">03</span>
+                <div><h4>OTP/2FA awareness is high</h4><p>Conceptual awareness of OTP/2FA is high, with 77% reporting full understanding of its purpose.</p></div>
+              </li>
+              <li class="impact-item">
+                <span class="i-num mono">04</span>
+                <div><h4>Baseline security habits are strong</h4><p>Most students report strong security habits: 76% always check for a secure site/app before paying, and 74% have never shared an OTP or PIN.</p></div>
+              </li>
+              <li class="impact-item">
+                <span class="i-num mono">05</span>
+                <div><h4>Fraud exposure is still common</h4><p>Despite generally sound habits, 45% of students report having personally experienced or been targeted by fraud - fraud exposure is common even among cautious users.</p></div>
+              </li>
+              <li class="impact-item">
+                <span class="i-num mono">06</span>
+                <div><h4>Response readiness lags behind exposure</h4><p>A meaningful gap exists between fraud exposure and fraud-response readiness: 41% of students either have only a rough idea or no idea of the correct steps to take after falling victim to fraud.</p></div>
+              </li>
+              <li class="impact-item">
+                <span class="i-num mono">07</span>
+                <div><h4>Fraud and privacy top the concern list</h4><p>Risk of fraud/scams and data privacy are the two leading concerns students associate with digital payments, ahead of technical or cash-availability concerns.</p></div>
+              </li>
+            </ol>
+          </div>
         </div>
 
         <div class="paper-section">
-          <h3 class="paper-heading">4. Impact &amp; recommendations</h3>
+          <h3 class="paper-heading">4. Impact</h3>
+          <p>These patterns carry real consequences for students, not just statistical interest.</p>
+          <ol class="impact-list">
+            <li class="impact-item">
+              <span class="i-num mono">01</span>
+              <div><h4>Daily reliance raises the stakes of any lapse</h4><p>With most students paying digitally at least once a day, an app outage, account lockout, or scam doesn't just cause inconvenience - it can disrupt food, transport, and daily spending in the moment it happens.</p></div>
+            </li>
+            <li class="impact-item">
+              <span class="i-num mono">02</span>
+              <div><h4>App concentration raises the target value</h4><p>Heavy reliance on one or two dominant apps means a phishing page or scam script designed around that single app's look and flow can convincingly target a large share of the student population at once.</p></div>
+            </li>
+            <li class="impact-item">
+              <span class="i-num mono">03</span>
+              <div><h4>Good habits are lowering everyday risk, but not eliminating it</h4><p>High OTP awareness and strong site-checking habits are genuinely protective, but they mainly stop the crudest scams - they do little against more convincing, targeted social-engineering attempts.</p></div>
+            </li>
+            <li class="impact-item">
+              <span class="i-num mono">04</span>
+              <div><h4>Nearly half the sample has already been targeted</h4><p>Fraud exposure at this scale means prevention messaging alone is not enough - a large share of students need to know what to do during and after an attempt, not just how to avoid one.</p></div>
+            </li>
+            <li class="impact-item">
+              <span class="i-num mono">05</span>
+              <div><h4>Slow or wrong responses can turn an attempt into a loss</h4><p>When over 4 in 10 students don't clearly know the correct steps after fraud, the delay or confusion in that moment - rather than the scam itself - is often what determines whether money is actually lost or recovered.</p></div>
+            </li>
+            <li class="impact-item">
+              <span class="i-num mono">06</span>
+              <div><h4>Unaddressed concerns can quietly erode trust</h4><p>With fraud risk and data privacy as the top worries, leaving them unaddressed risks pushing some students toward less secure workarounds (like avoiding certain apps or sharing accounts) rather than safer digital habits.</p></div>
+            </li>
+          </ol>
+        </div>
+
+        <div class="paper-section">
+          <h3 class="paper-heading">5. Solutions</h3>
           <ol class="impact-list" id="impact-list"></ol>
         </div>
 
         <div class="paper-section">
-          <h3 class="paper-heading">5. Conclusion</h3>
+          <h3 class="paper-heading">6. Conclusion</h3>
           <p id="p-conclusion"></p>
           <p class="paper-caveat" id="p-caveat"></p>
         </div>
@@ -1198,7 +1263,7 @@ function renderFindings(){
   }
   setPara('p-confidence', `On a 1-to-5 self-rating scale, "${safetyTop.label}" was the most commonly selected rating for how safe respondents feel while making digital payments, chosen by ${safetyTop.percent}% of respondents, while a fraud-knowledge rating of "${knowledgeTop.label}" was the most common self-assessment of their own understanding of fraud, at ${knowledgeTop.percent}%.${avgSafety !== null ? ` Averaged across every respondent who answered both questions, the mean self-rated safety score was ${avgSafety.toFixed(1)} out of 5, compared with a mean self-rated fraud-knowledge score of ${avgKnowledge.toFixed(1)} out of 5.` : ''}${gapSentence}`);
 
-  // ---- Impact & recommendations ----
+  // ---- Solutions ----
   const impactEl = document.getElementById('impact-list');
   if (impactEl){
     const impacts = [
